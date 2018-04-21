@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
-mongoose.set("debug",true);
+mongoose.set("debug", true);
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://https://reservationapp-raddunin575255.codeanyapp.com/reservationapp",{
-  keepAlive:true,
-  useMongoClient: true
-})
+mongoose.connect("mongodb://localhost/ReservationApp", {
+  keepAlive: true
+});
+
+module.exports.User = require("./user");
